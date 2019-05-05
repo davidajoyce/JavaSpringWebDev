@@ -11,5 +11,11 @@ public class IndexController
 	{
 		return "index.jsp";
 	}
+	
+	@RequestMapping("/feedback.htm")
+	public String feedback()
+	{
+		return "feedback.jsp";
+	}
 
 }
