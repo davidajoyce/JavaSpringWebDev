@@ -1,4 +1,4 @@
-package com.JavaSpringWebDev.davidj.entity;
+package com.JavaSpringWebDevGoogleApp.davidj.entity;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;

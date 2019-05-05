@@ -1,4 +1,4 @@
-package com.JavaSpringWebDev.davidj;
+package com.JavaSpringWebDevGoogleApp.davidj;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.JavaSpringWebDev.davidj.dao.FeedbackDao;
-import com.JavaSpringWebDev.davidj.entity.Feedback;
+import com.JavaSpringWebDevGoogleApp.davidj.dao.FeedbackDao;
+import com.JavaSpringWebDevGoogleApp.davidj.entity.Feedback;
 
 @Controller
 public class IndexController 
