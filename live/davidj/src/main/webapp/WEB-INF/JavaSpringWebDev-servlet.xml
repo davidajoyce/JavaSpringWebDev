@@ -22,4 +22,23 @@
 	<property name="maxPoolSize" value="10" />
 	<property name="maxIdleTime" value="30000" />
     </bean>
+    
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource" ref="myDataSource" />
+		<property name="packagesToScan" value="com.JavaSpringWebDev.davidj.entity" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="myTransactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>	
+	
+	<tx:annotation-driven transaction-manager="myTransactionManager" />	
+	
+    
 </beans>
