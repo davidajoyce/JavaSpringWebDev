@@ -1,15 +1,21 @@
 package com.JavaSpringWebDev.davidj.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component
-@Scope("prototype")
+/*@Component
+@Scope("prototype")*/
+@Entity
 public class Feedback 
 {
 	private String name;
+	// this will make it a primary key
+	@Id
 	private String email;
-	private String reg;
+	private String regarding;
 	private String code;
 	private int rating;
 	
@@ -20,7 +26,7 @@ public class Feedback
 		super();
 		this.name = name;
 		this.email = email;
-		this.reg = reg;
+		this.regarding = reg;
 		this.code = code;
 		this.rating = rating;
 	}
@@ -39,10 +45,10 @@ public class Feedback
 		this.email = email;
 	}
 	public String getReg() {
-		return reg;
+		return regarding;
 	}
 	public void setReg(String reg) {
-		this.reg = reg;
+		this.regarding = reg;
 	}
 	public String getCode() {
 		return code;
@@ -60,7 +66,7 @@ public class Feedback
 
 	@Override
 	public String toString() {
-		return "Feedback [name=" + name + ", email=" + email + ", reg=" + reg + ", code=" + code + ", rating=" + rating
+		return "Feedback [name=" + name + ", email=" + email + ", reg=" + regarding+ ", code=" + code + ", rating=" + rating
 				+ "]";
 	}
 	
