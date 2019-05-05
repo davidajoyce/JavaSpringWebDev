@@ -311,7 +311,7 @@ div.error {
 
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="name" name="name" pattern="[A-Za-z]{2,}" title="Two or more characters" type="text" class="validate" data-error="#e1" required>
+                  <input id="name" name="name" title="Two or more characters" type="text" class="validate" data-error="#e1" required>
                   <label for="name">Your Name</label>
                   <div id="e1"></div>
                 </div>
