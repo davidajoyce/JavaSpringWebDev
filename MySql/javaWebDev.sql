@@ -16,3 +16,16 @@ regarding varchar(30), code varchar(10), rating int);
 
 drop table Feedback
 drop table feedback
+
+use javaWebDev;
+select * from Feedback
+
+drop table Feedback
+
+-- match the column names with the keys used in the html in Feedback.jsp
+create table Feedback (name varchar(30), email varchar(30), msg varchar(10000), 
+reg varchar(30), code varchar(10), rating int);
+
+
+use javaWebDev;
+select * from Feedback

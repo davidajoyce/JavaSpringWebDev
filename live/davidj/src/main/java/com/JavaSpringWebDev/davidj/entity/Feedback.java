@@ -15,26 +15,17 @@ public class Feedback
 	// this will make it a primary key
 	@Id
 	private String email;
-	private String regarding;
+	private String reg;
 	private String code;
 	private int rating;
+	private String msg;
 	
 	public Feedback() {}
-
-	
-	public Feedback(String name, String email, String reg, String code, int rating) {
-		super();
-		this.name = name;
-		this.email = email;
-		this.regarding = reg;
-		this.code = code;
-		this.rating = rating;
-	}
-	
-	
+		
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -45,10 +36,10 @@ public class Feedback
 		this.email = email;
 	}
 	public String getReg() {
-		return regarding;
+		return reg;
 	}
 	public void setReg(String reg) {
-		this.regarding = reg;
+		this.reg = reg;
 	}
 	public String getCode() {
 		return code;
@@ -62,11 +53,21 @@ public class Feedback
 	public void setRating(int rating) {
 		this.rating = rating;
 	}
+	
+	
+	public String getMsg() {
+		return msg;
+	}
+
+
+	public void setMsg(String msg) {
+		this.msg = msg;
+	}
 
 
 	@Override
 	public String toString() {
-		return "Feedback [name=" + name + ", email=" + email + ", reg=" + regarding+ ", code=" + code + ", rating=" + rating
+		return "Feedback [name=" + name + ", email=" + email + ", reg=" + reg+ ", code=" + code + ", msg=" + msg + ", rating=" + rating
 				+ "]";
 	}
 	
